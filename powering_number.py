@@ -1,16 +1,16 @@
-a=3
-exp=8
+def powering(num,power):
+    '''
+    Recursive function to calculate the Nth power of a number
+    '''
+    if power==1:    #Base Case
+        return num
 
-def powering(a,power):
-    if power==1:
-        return a
-
-    elif power%2==0:
-        return (powering(a,power//2))**2
-    else:
-        return ((powering(a, power//2)) ** 2)*a
+    elif power%2==0: #Even Power
+        return (powering(num,power//2))**2
+    else:  #Odd Power
+        return ((powering(num, power//2)) ** 2)*num
 
 
 
-val=powering(3,3)
-print(val)
+result=powering(3,1023)
+print(result)
